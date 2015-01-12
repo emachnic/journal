@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+  before_action :require_login, exceept: [:index, :show]
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
   # GET /entries
