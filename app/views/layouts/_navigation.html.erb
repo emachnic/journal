@@ -8,5 +8,12 @@
     <ul>
       <%= render 'layouts/navigation_links' %>
     </ul>
+    <ul class='right'>
+      <% if current_user %>
+        <li class='current-ip'>
+          Current login IP: <%= current_user.current_login_ip %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </nav>
