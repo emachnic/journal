@@ -2,3 +2,10 @@
 <li>
   <%= link_to 'Entries', entries_path %>
 </li>
+<li>
+  <% if current_user %>
+    <%= link_to 'Logout', logout_path %>
+  <% else %>
+    <%= link_to 'Login', login_path %>
+  <% end %>
+</li>
