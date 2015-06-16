@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :sessions
   resources :users
   resources :entries
+  resources :activations, only: [:edit]
   root 'entries#index'
 end
